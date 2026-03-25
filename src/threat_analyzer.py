@@ -133,7 +133,7 @@ def main():
     for ip in suspicious_ips:
         print(f"Checking {ip} with VirusTotal...")
         malicious_count = check_virustotal(ip)
-        malicious_count = 25;
+        
         if malicious_count > 0:
             print(f"🚨 DANGER: {ip} is malicious ({malicious_count} flags). Mitigating...")
             update_firewall(ip, malicious_count)
